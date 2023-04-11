@@ -1,15 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --main-dark: #121212;
   --main-light-purple: #C595FF;
+
+  --fs-big: 8em;
+  --fs-small: 5em;
 }
 
-* {
-  box-sizing: border-box;
+html, body {
   margin: 0;
 }
 
-.header-container {
-  width: 90%;
+.main-wrapper{
+  background-color: var(--main-dark);
+  font-family: 'Unbounded', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-transform:uppercase;
+}
+
+.header-container :nth-child(1){
+  display: flex;
+  color: var(--main-light-purple);
+  margin: 0;
+  font-size: var(--fs-small);
+}
+
+.header-container :nth-child(2){
+  display: flex;
+  margin: 20px 0;
+  font-size: var(--fs-big);
+  color: #ffffff;
+}
+
+.header-container :nth-child(3) {
+  display: flex;
+  color: var(--main-light-purple);
+  margin: 0;
+  justify-content: end;
+  font-size: var(--fs-small);
+}
+
+.cursor {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  border-radius: 50%;
+  color: #C595FF;
+}
+
+@media (max-width: 40em) {
+  :root {
+    --fs-big: 5em;
+    --fs-small: 3em;
+  }
 }
