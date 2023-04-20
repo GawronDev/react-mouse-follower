@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 
+* {
+  cursor: none;
+}
+
 :root {
   --main-dark: #121212;
   --main-light-purple: #C595FF;
@@ -10,35 +14,65 @@
 
 html, body {
   margin: 0;
+  width: 100vw;
+  font-family: 'Unbounded', sans-serif;
+  background-color: var(--main-dark);
+
 }
 
-.main-wrapper{
-  background-color: var(--main-dark);
-  font-family: 'Unbounded', sans-serif;
-  height: 100vh;
+.main-wrapper {
   width: 100vw;
+  height: 100vh;
+}
+
+.primary-wrapper {
+  height: 100%;
+  width: 100%;
   margin: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.secondary-wrapper{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C595FF;
+  --mask: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    black var(--maskSize1, 0%),
+    transparent 0,
+    transparent 0
+  );
+  mask-image: var(--mask);
+  -webkit-mask-image: var(--mask);
 }
 
 .header-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  text-transform:uppercase;
+  position: absolute;
+}
+
+.header-container-secondary{
+  
 }
 
 .cursor {
-  width: 200px;
-  height: 200px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
   position: fixed;
   border-radius: 50%;
-  background-color: #C595FF;
-
+  background-color: transparent;
+  border: 2px solid grey;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: luminosity;
 }
 
 .header-container :nth-child(1){
@@ -58,6 +92,28 @@ html, body {
 .header-container :nth-child(3) {
   display: flex;
   color: var(--main-light-purple);
+  margin: 0;
+  justify-content: end;
+  font-size: var(--fs-small);
+}
+
+.header-container-secondary  :nth-child(1){
+  display: flex;
+  color: white;
+  margin: 0;
+  font-size: var(--fs-small);
+}
+
+.header-container-secondary :nth-child(2){
+  display: flex;
+  margin: 20px 0;
+  font-size: var(--fs-big);
+  color: var(--main-dark);
+}
+
+.header-container-secondary :nth-child(3) {
+  display: flex;
+  color: white;
   margin: 0;
   justify-content: end;
   font-size: var(--fs-small);
