@@ -17,12 +17,6 @@ function App() {
       "--maskSize1": "10%",
       duration: 0.5,
       ease: "back.out(2)",
-    }).to(hero, {
-      "--maskSize2": "28%",
-      "--maskSize3": "calc(28% + 0.1rem)",
-      duration: 0.5,
-      delay: 0.5,
-      ease: "back.out(2)",
     })
     document.addEventListener("mousemove", debounce(function (event) {
       const { clientX, clientY } = event
@@ -76,11 +70,6 @@ function App() {
         "--maskSize1": "10%",
         duration: 0.5,
         ease: "back.out(1)",
-      }).to(hero, {
-        "--maskSize2": "28%",
-        "--maskSize3": "calc(28% + 0.1rem)",
-        duration: 0.5,
-        ease: "back.in(2)",
       })
       
 
@@ -107,11 +96,6 @@ function App() {
         "--maskSize1": "10%",
         duration: 0.5,
         ease: "back.out(1)",
-      }).to(hero, {
-        "--maskSize2": "28%",
-        "--maskSize3": "calc(28% + 0.1rem)",
-        duration: 0.5,
-        ease: "back.in(2)",
       })
     }
   }

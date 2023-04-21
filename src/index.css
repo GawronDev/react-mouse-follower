@@ -48,7 +48,7 @@ html, body {
   justify-content: center;
   background-color: var(--main-secondary-background);
   --mask: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
+    circle at var(--x, 50.3%) var(--y, 50.3%),
     black var(--maskSize1, 0%),
     transparent 0,
     transparent 0
