@@ -2,21 +2,27 @@
 
 * {
   cursor: none;
+  user-select: none;
 }
 
 :root {
-  --main-dark: #121212;
-  --main-light-purple: #C595FF;
-
-  --fs-big: 8em;
-  --fs-small: 5em;
+  
 }
 
 html, body {
+  --main-background: #121212;
+  --main-secondary-background: #C595FF;
+  --main-header: #ffffff;
+  --main-dark: #121212;
+  --main-light-purple: #C595FF;
+  --main-white: #ffffff;
+
+  --fs-big: 8em;
+  --fs-small: 5em;
   margin: 0;
   width: 100vw;
   font-family: 'Unbounded', sans-serif;
-  background-color: var(--main-dark);
+  background-color: var(--main-background);
 
 }
 
@@ -42,7 +48,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #C595FF;
+  background-color: var(--main-secondary-background);
   --mask: radial-gradient(
     circle at var(--x, 50%) var(--y, 50%),
     black var(--maskSize1, 0%),
@@ -55,10 +61,6 @@ html, body {
 
 .header-container {
   position: absolute;
-}
-
-.header-container-secondary{
-  
 }
 
 .cursor {
@@ -86,7 +88,7 @@ html, body {
   display: flex;
   margin: 20px 0;
   font-size: var(--fs-big);
-  color: #ffffff;
+  color: var(--main-header);
 }
 
 .header-container :nth-child(3) {
@@ -99,7 +101,7 @@ html, body {
 
 .header-container-secondary  :nth-child(1){
   display: flex;
-  color: white;
+  color: var(--main-white);
   margin: 0;
   font-size: var(--fs-small);
 }
@@ -113,7 +115,7 @@ html, body {
 
 .header-container-secondary :nth-child(3) {
   display: flex;
-  color: white;
+  color: var(--main-white);
   margin: 0;
   justify-content: end;
   font-size: var(--fs-small);
