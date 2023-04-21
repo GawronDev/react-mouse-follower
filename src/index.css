@@ -4,11 +4,6 @@
   cursor: none;
   user-select: none;
 }
-
-:root {
-  
-}
-
 html, body {
   --main-background: #121212;
   --main-secondary-background: #C595FF;
@@ -16,9 +11,11 @@ html, body {
   --main-dark: #121212;
   --main-light-purple: #C595FF;
   --main-white: #ffffff;
+  --main-sub: #ffffff;
 
   --fs-big: 8em;
   --fs-small: 5em;
+
   margin: 0;
   width: 100vw;
   font-family: 'Unbounded', sans-serif;
@@ -30,6 +27,7 @@ html, body {
   width: 100vw;
   height: 100vh;
 }
+
 
 .primary-wrapper {
   height: 100%;
@@ -121,6 +119,25 @@ html, body {
   font-size: var(--fs-small);
 }
 
+.footer {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0%;
+  color: var(--main-sub);
+  font-size: 12px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--main-sub);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 100em) {
   :root {

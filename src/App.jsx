@@ -10,6 +10,7 @@ function App() {
 
 
 
+  // Initialize the bubble and the mouse listener
   useEffect(() => {
     const hero = document.querySelector(".secondary-wrapper")
     tl.to(hero, {
@@ -37,6 +38,7 @@ function App() {
     }, 2))
   }, [])
 
+  // Debounce function for smooth following of the bubble
   function debounce(callback, wait) {
     var timeout;
     return function (e) {
@@ -47,6 +49,8 @@ function App() {
       }, wait);
     }
   }
+
+  // Animate the transition of colors on click
   function clickCallback() {
     const hero = document.querySelector(".secondary-wrapper");
     if (purple == false) {
@@ -64,6 +68,7 @@ function App() {
         "--main-header": "#121212",
         "--main-light-purple": "#ffffff",
         "--main-secondary-background": "#121212",
+        "--main-sub": "#121212",
         ease: "back.in(1)"
       })
 
@@ -79,7 +84,6 @@ function App() {
       })
       
 
-      // document.body.style.backgroundColor = "var(--main-light-purple)"
     } else {
       purple = false;
       tl.to(hero, {
@@ -95,6 +99,7 @@ function App() {
         "--main-header": "#ffffff",
         "--main-light-purple": "#C595FF",
         "--main-secondary-background": "#C595FF",
+        "--main-sub": "#ffffff",
         ease: "back.in(1)"
       })
 
@@ -127,6 +132,9 @@ function App() {
           <h1>Dream web vision</h1>
           <h3>To life</h3>
         </div>
+      </div>
+      <div className="footer">
+        <p>Created by Jakub Gawroński |  <a href='https://github.com/GawronDev/react-scroll-follower'>GitHub</a></p>
       </div>
     </div>
   )
