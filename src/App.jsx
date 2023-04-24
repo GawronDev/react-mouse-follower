@@ -26,8 +26,8 @@ function App() {
       gsap.to(hero, {
         "--x": `${x}%`,
         "--y": `${y}%`,
-        duration: 0.1,
-        ease: "sine.in",
+        duration: 0.7,
+        ease: "sine.out",
       })
     }, 2))
   }, [])
