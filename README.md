@@ -7,7 +7,7 @@ This effect would be ideal for a landing page to get the users attention right a
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/64081305/233596978-7888dbc8-4941-4541-8f4f-ce86c8e7e162.png)
 
-## Rescourses
+## Resources
 
 - ReactJS
 - GSAP
